@@ -1,5 +1,8 @@
 import datetime as dt
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -80,9 +83,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_L10N = True
+
 USE_TZ = True
 
 STATIC_URL = '/static/'
@@ -95,13 +102,17 @@ AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
+
         'rest_framework.permissions.IsAdminUser',
     ],
+
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
+
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 
@@ -110,4 +121,3 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': dt.timedelta(days=30),
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
-
