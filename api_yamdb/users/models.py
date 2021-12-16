@@ -33,9 +33,6 @@ class User(AbstractUser):
         default=USER
     )
 
-    class Meta:
-        ordering = ['-date_joined']
-
     def save(self, *args, **kwargs):
         if self.username in self.FORBIDDEN_USERNAME and not self.is_superuser:
             raise ValidationError(
@@ -57,4 +54,5 @@ class User(AbstractUser):
     class Meta:
         ordering = (
             '-username',
+            '-date_joined',
         )
