@@ -1,5 +1,8 @@
 # infra_sp2
 infra_sp2
+- Автор: Кричевцов Антон.
+- Когорта: 18
+- Репозиторий гит: https://github.com/Priest-4612/infra_sp2
 
 ## Установка
 1. Войдите в папку infra
@@ -20,7 +23,7 @@ infra_sp2
 ```
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
-docker-compose exec web python manage.py collectstatic --no-input 
+docker-compose exec web python manage.py collectstatic --no-input
 ```
 6. Проверьте работоспособность приложения:
 - зайдите на http://localhost/admin/ и убедитесь, что страница отображается полностью: статика подгрузилась;
