@@ -1,7 +1,8 @@
-# api_yamdb
-api_yamdb
+# infra_sp2
+infra_sp2
 
 ## Установка
+Войдите в папку infra
 Запустите docker-compose командой ```docker-compose up```. 
 У вас развернётся проект, запущенный через Gunicorn с базой данных Postgres.
 
